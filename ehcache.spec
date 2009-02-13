@@ -156,7 +156,7 @@ Ehcache is a pure Java, in-process cache with the following features:
 %if %{with_hibernate}
 %package hibernate
 Summary:        Hibernate3 cache provider in %{name}
-Group:          Development/Libraries/Java
+Group:          Development/Java
 Requires:       %{name} = 0:%{version}
 Requires:       hibernate3
 
@@ -166,7 +166,7 @@ Requires:       hibernate3
 
 %package javadoc
 Summary:        Javadoc for %{name}
-Group:          Development/Documentation
+Group:          Development/Java
 Requires(post):   /bin/rm,/bin/ln
 Requires(postun): /bin/rm
 
@@ -176,7 +176,7 @@ Requires(postun): /bin/rm
 %if %{with_maven}
 %package manual
 Summary:        Documents for %{name}
-Group:          Development/Documentation
+Group:          Development/Java
 
 %description manual
 %{summary}.
