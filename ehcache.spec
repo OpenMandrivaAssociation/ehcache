@@ -263,9 +263,16 @@ ln -sf $(build-classpath commons-collections) commons-collections-2.1.1.jar
 ln -sf $(build-classpath commons-logging) commons-logging-1.0.4.jar
 popd
 %if %{with_tests}
-ant dist-jar javadoc hibernate-jar test test-hibernate
+ant dist-jar javadoc
 %else
-ant dist-jar javadoc hibernate-jar
+ant dist-jar javadoc
+%endif
+
+%if %{with_hibernate}
+ant hibernate-jar
+%if %{with_tests}
+ant test-hibernate
+%endif
 %endif
 
 %endif
