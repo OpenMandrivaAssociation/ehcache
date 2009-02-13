@@ -30,24 +30,30 @@
 
 %define gcj_support %{?_with_gcj_support:1}%{!?_with_gcj_support:%{?_without_gcj_support:0}%{!?_without_gcj_support:%{?_gcj_support:%{_gcj_support}}%{!?_gcj_support:0}}}
 
-# If you don't want to build with maven, and use straight ant instead,
-# give rpmbuild option '--without maven'
+# If you want to build with maven, instead of using straight ant,
+# give rpmbuild option '--with maven'
 
-%define with_maven %{!?_without_maven:1}%{?_without_maven:0}
-%define without_maven %{?_without_maven:1}%{!?_without_maven:0}
+#define with_maven %{!?_without_maven:1}%{?_without_maven:0}
+#define without_maven %{?_without_maven:1}%{!?_without_maven:0}
+%define with_maven %{!?_with_maven:0}%{?_with_maven:1}
+%define without_maven %{?_with_maven:0}%{!?_with_maven:1}
 
 # If you don't want to run the lengthy tests
 # give rpmbuild option '--without tests'
 
-%define with_tests %{!?_without_tests:1}%{?_without_tests:0}
-%define without_tests %{?_without_tests:1}%{!?_without_tests:0}
+#define with_tests %{!?_without_tests:1}%{?_without_tests:0}
+#define without_tests %{?_without_tests:1}%{!?_without_tests:0}
+%define with_tests %{!?_with_tests:0}%{?_with_tests:1}
+%define without_tests %{?_with_tests:0}%{!?_with_tests:1}
 
 # If you don't want to build with hibernate cache provider, 
 # while hibernate3 isn't available yet,
 # give rpmbuild option '--without hibernate'
 
-%define with_hibernate %{!?_without_hibernate:1}%{?_without_hibernate:0}
-%define without_hibernate %{?_without_hibernate:1}%{!?_without_hibernate:0}
+#define with_hibernate %{!?_without_hibernate:1}%{?_without_hibernate:0}
+#define without_hibernate %{?_without_hibernate:1}%{!?_without_hibernate:0}
+%define with_hibernate %{!?_with_hibernate:0}%{?_with_hibernate:1}
+%define without_hibernate %{?_with_hibernate:0}%{!?_with_hibernate:1}
 
 %define section free
 %define namedversion 1.2.0_03
@@ -55,7 +61,7 @@
 Summary:        Easy Hibernate Cache
 Name:           ehcache
 Version:        1.2.0.3
-Release:        2jpp
+Release:        %mkrel 2
 Epoch:          0
 License:        LGPL
 URL:            http://ehcache.sourceforge.net/
