@@ -61,7 +61,7 @@
 Summary:        Easy Hibernate Cache
 Name:           ehcache
 Version:        1.2.0.3
-Release:        %mkrel 3
+Release:        %mkrel 4
 Epoch:          0
 License:        LGPL
 URL:            http://ehcache.sourceforge.net/
