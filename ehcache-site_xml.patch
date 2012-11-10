@@ -1,0 +1,13 @@
+--- src/site/site.xml.sav	2007-08-06 15:28:14.000000000 +0200
++++ src/site/site.xml	2007-08-06 15:29:19.000000000 +0200
+@@ -1,5 +1,10 @@
+ <?xml version="1.0" encoding="ISO-8859-1"?>
+ <project name="Maven">
++   <skin>
++    <groupId>org.apache.maven</groupId>
++    <artifactId>maven-default-skin</artifactId>
++    <version>1.0</version>
++   </skin>
+     <bannerLeft>
+         <name>ehcache</name>
+         <src>images/ehcache_logo.gif</src>

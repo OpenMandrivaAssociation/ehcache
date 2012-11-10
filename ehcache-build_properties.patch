@@ -1,0 +1,19 @@
+--- build.properties.sav	2006-10-23 05:57:08.000000000 +0200
++++ build.properties	2007-08-02 16:06:18.000000000 +0200
+@@ -16,6 +16,7 @@
+ dist.jar.dir=${build.dir}/jar
+ dist.release.dir=${dist.dir}/release
+ 
++build.hibernate.classes.dir=${build.dir}/hibernate-classes
+ build.classes.dir=${build.dir}/classes
+ build.javadoc.dir=${build.dir}/site/javadoc
+ build.log.dir=${build.dir}/log
+@@ -29,6 +30,8 @@
+ test.config.dir=${test.dir}/resources
+ test.java.dir=${test.dir}/java
+ test.dist.dir=${build.dir}/test-dist
++test.hibernate.classes.dir=${build.dir}/test-hibernate-classes
++test.hibernate.results.dir=${build.dir}/log/test-hibernate-results
+ test.classes.dir=${build.dir}/test-classes
+ test.results.dir=${build.dir}/log/test-results
+ test.log.file=testReport.xml
