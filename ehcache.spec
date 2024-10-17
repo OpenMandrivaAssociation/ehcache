@@ -64,7 +64,7 @@ Version:        1.2.0.3
 Release:        %mkrel 4
 Epoch:          0
 License:        LGPL
-URL:            http://ehcache.sourceforge.net/
+URL:            https://ehcache.sourceforge.net/
 Group:          Development/Java
 Source0:        ehcache-1.2.0_03-src.tar.gz
 # svn export https://svn.sourceforge.net/svnroot/ehcache/branches/ehcache-1.2.0_03
